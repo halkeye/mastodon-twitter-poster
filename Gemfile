@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # The web framework
-gem "rails", "~> 5.2.4"
+gem "rails", "~> 5.2.5"
 gem "rails-i18n"
 gem "pg"
 gem "puma"
@@ -20,7 +20,8 @@ gem "turbolinks"
 gem "jbuilder"
 
 gem "mastodon-api", require: "mastodon", github: "tootsuite/mastodon-api", branch: "master"
-gem "twitter", github: "renatolond/twitter", branch: "different_uploads"
+#gem "twitter", github: "renatolond/twitter", branch: "different_uploads"
+gem "twitter"
 gem "devise"
 gem "devise-i18n" # translations for devise forms
 gem "omniauth-twitter"
@@ -43,6 +44,8 @@ gem "sidekiq"
 gem "sidekiq-scheduler"
 # Used to be able to avoid doubled sidekiq jobs
 gem "sidekiq-unique-jobs", "~> 6.0"
+# Used to make sure sidekiq is still running
+gem 'sidekiq_alive'
 
 # Used to validate text length before submitting to twitter
 gem "twitter-text"
