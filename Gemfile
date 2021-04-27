@@ -50,6 +50,8 @@ gem 'sidekiq_alive'
 # Used to validate text length before submitting to twitter
 gem "twitter-text"
 
+gem "health_check"
+
 group :development, :test do
   gem "byebug"
   gem "capybara"
