@@ -1,4 +1,4 @@
-require_relative "lib/twitter/entity/permalink.rb"
+require_relative "../../lib/twitter/entity/permalink.rb"
 require 'statsd'
 
 Sidekiq.configure_server do |config|

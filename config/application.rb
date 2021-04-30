@@ -6,7 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-require_relative "lib/twitter/entity/permalink.rb"
+require_relative "../../lib/twitter/entity/permalink.rb"
 
 module MastodonTwitterPoster
   class Application < Rails::Application
