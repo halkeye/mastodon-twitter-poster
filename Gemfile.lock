@@ -347,6 +347,9 @@ GEM
       sidekiq (>= 3)
       thwait
       tilt (>= 1.4.0)
+    sidekiq-statsd (2.1.0)
+      activesupport
+      sidekiq (>= 3.3.1)
     sidekiq-unique-jobs (6.0.25)
       concurrent-ruby (~> 1.0, >= 1.0.5)
       sidekiq (>= 4.0, < 7.0)
@@ -471,6 +474,7 @@ DEPENDENCIES
   selenium-webdriver
   sidekiq
   sidekiq-scheduler
+  sidekiq-statsd
   sidekiq-unique-jobs (~> 6.0)
   sidekiq_alive
   simplecov

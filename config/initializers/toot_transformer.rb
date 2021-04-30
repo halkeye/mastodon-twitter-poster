@@ -12,12 +12,10 @@ end
 
 begin
   twitter_config = twitter_client.configuration
-  begin
-    TootTransformer.twitter_short_url_length = twitter_config.short_url_length
-    TootTransformer.twitter_short_url_length_https = twitter_config.short_url_length_https
-  rescue
-  end
+  TootTransformer.twitter_short_url_length = twitter_config.short_url_length
+  TootTransformer.twitter_short_url_length_https = twitter_config.short_url_length_https
 rescue Twitter::Error::Forbidden, Twitter::Error::BadRequest
   Rails.logger.error { "Missing Twitter credentials" }
   exit 1
+rescue
 end

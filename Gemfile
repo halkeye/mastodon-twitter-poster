@@ -34,6 +34,7 @@ gem "webpacker"
 gem "httparty"
 
 gem "statsd-ruby"
+gem "sidekiq-statsd"
 gem "foreman"
 gem "dotenv-rails"
 gem "ruby-filemagic"
