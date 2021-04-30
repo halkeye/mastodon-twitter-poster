@@ -6,5 +6,3 @@ Sidekiq.configure_server do |config|
     chain.add Sidekiq::Statsd::ServerMiddleware, env: RAILS.env, prefix: "worker", statsd: Stats.stats if Stats.enabled?
   end
 end
-
-SidekiqPrometheus.setup
