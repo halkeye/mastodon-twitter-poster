@@ -11,6 +11,10 @@ class Stats
     end
   end
 
+  def statsd
+    @statsd
+  end
+
   def increment(name)
     @statsd&.increment("#{name}")
   end

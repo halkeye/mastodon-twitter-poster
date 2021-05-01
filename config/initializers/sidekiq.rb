@@ -3,6 +3,6 @@ require 'statsd'
 
 Sidekiq.configure_server do |config|
   config.server_middleware do |chain|
-    chain.add Sidekiq::Statsd::ServerMiddleware, env: RAILS.env, prefix: "worker", statsd: Stats.stats if Stats.enabled?
+    chain.add Sidekiq::Statsd::ServerMiddleware, env: Rails.env, prefix: "worker", statsd: Stats.new.statsd if Stats.enabled?
   end
 end
