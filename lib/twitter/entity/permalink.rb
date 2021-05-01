@@ -1,17 +1,14 @@
-require 'twitter/entities'
-require 'twitter/entity'
+require 'twitter'
 require 'memoizable'
 
-module TwitterMonkeyPatch
-  include Memoizable
-
-  def quoted_status_permalink
-    Twitter::Entity::Permalink.new(@attrs.fetch(:quoted_status_permalink)) if @attrs.fetch(:quoted_status_permalink)
+module Twitter
+  module Entities
+    def quoted_status_permalink
+      Twitter::Entity::Permalink.new(@attrs.fetch(:quoted_status_permalink)) if @attrs.fetch(:quoted_status_permalink)
+    end
+    memoize :quoted_status_permalink
   end
-  memoize :quoted_status_permalink
 end
-
-Twitter::Entities.include TwitterMonkeyPatch
 
 module Twitter
   class Entity
